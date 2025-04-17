@@ -1,0 +1,19 @@
+.lastViewsPage {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #111;
+    min-height: 100vh;
+    & .lastViewRenderBlock {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .container {
+            display: flex;
+            justify-content: start;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+}

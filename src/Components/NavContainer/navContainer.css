@@ -1,0 +1,108 @@
+nav {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111dc;
+    border-bottom: 0.5px solid rgb(65, 64, 64);
+    overflow: hidden;
+    & .container {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .logo {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px 0;
+        }
+        & .navMenuPart {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                display: none;
+            }
+            & .block {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 35px;
+                button {
+                    width: 20%;
+                    background-color: unset;
+                    padding: 20px 0;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 19px;
+                    a {
+                        text-decoration: none;
+                        color: unset;
+                        transition: 0.5s;
+                        &:hover {
+                            transform: scale(1.1);
+                            color: rgba(0, 0, 0, 0.74);
+                        }
+                    }
+                    
+                }
+            }   
+        }
+    }
+}
+
+.respMenu {
+    display: none;
+    position: absolute;
+    width: 30%;
+    height: 30vh;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    z-index: 222;
+    transition: 0.5s;
+    top: 100px;
+    gap: 25px;
+    padding-top: 10px;
+    button {
+        width: 90%;
+        border-radius: 7px;
+        padding: 5px 0;
+        background-color: black;
+        border: none;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 792px) {
+    nav .container  .navMenuPart {
+        align-items: center;
+        justify-content: end;
+        .block {
+            display: none;
+        }
+        svg {
+            display: block;
+        }
+    }
+    nav .container .logo {
+        font-size: 16px;
+        width: 25%;
+    }
+    .respMenu {
+        display: block;
+    }
+}

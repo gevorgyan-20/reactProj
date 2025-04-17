@@ -1,0 +1,121 @@
+.singleFilmPage {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    & .container {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #222222;
+        margin: 0 auto;
+        gap: 30px;
+        align-items: center;
+        
+        & .myRatesBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            & .rates {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .alreadyRated {
+                    &:hover {
+                        background-color: unset !important;
+                        color: unset !important;
+                    }
+                }
+                & .circleRates {
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    border: 1px solid black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    transition: 0.4s;
+                    &:hover {
+                        background-color: rgb(129, 128, 128);
+                        color: gold;
+                    }
+                }
+            }
+        }
+    }
+    & .second {
+        flex-direction: column;
+        align-items: start;
+        padding-bottom: 50px;
+        padding-left: 35px;
+        & .myRate {
+            font-size: 28px;
+        }
+    }
+}
+
+
+@media (max-width: 1220px) {
+    .singleFilmPage .container .topBlock {
+        flex-direction: column;
+        align-items: center;
+        & .leftBlock {
+            width: 338px;
+        }
+        & .rightBlock {
+            width: 80%;
+        }
+    }
+
+    
+    
+}
+
+@media (max-width: 792px) {
+    .singleFilmPage .container .topBlock {
+        & .leftBlock {
+            width: 276px;
+        }
+    }
+    .singleFilmPage .second {
+        padding-left: 5px;
+    }
+    .singleFilmPage .container .myRatesBlock .rates {
+        gap: 4px;
+        & .circleRates {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .singleFilmPage .second .myRate{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 494px) {
+    .singleFilmPage .container .myRatesBlock .rates {
+        gap: 3px;
+        & .circleRates {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    .singleFilmPage .second .myRate{
+        font-size: 17px;
+    }
+
+    .singleFilmPage .container .topBlock {
+        flex-direction: column;
+        align-items: center;
+        & .leftBlock .imgBlock{
+            width: 280px;
+        }
+    }
+}

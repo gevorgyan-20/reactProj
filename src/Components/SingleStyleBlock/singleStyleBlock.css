@@ -1,0 +1,90 @@
+.topBlock {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & .leftBlock {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+        & .imgBlock {
+            width: 400px;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            img {
+                width: 100%;
+                border: 5px solid #5f5e5e;
+                height: 100%;
+            }
+        }
+    }
+    & .rightBlock {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        font-size: 17px;
+        & .watchLaterIconBlock {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 15px 12px;
+            span {
+                font-weight: 300;
+            }
+            & .firstSpan {
+                width: 40%;
+                color: #c9c9c9;
+            }
+            & .secondSpan {
+                width: 60%;
+                color: white;
+            }
+            &:nth-child(even) {
+                background-color: rgba(128, 128, 128, 0.253);
+            }
+        }
+        & .title {
+            align-items: center;
+            & .secondSpan{
+                &::first-letter {
+                    color: red;
+                }
+                font-size: 35px;
+            }
+        } 
+    }
+}
+& .bottomBlock {
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.253);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #5f5e5e;
+    div {
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        & .firstSpan {
+            font-size: 22px;
+        }
+        & .secondSpan {
+            font-weight: 300;
+            line-height: 150%;
+        }
+    }
+}
